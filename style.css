@@ -15,19 +15,19 @@ body {
 }
 
 .app {
+  width: 350px;
   text-align: center;
-  width: 320px;
 }
 
 h1 {
   margin-bottom: 20px;
 }
 
-/* Search UI */
+/* Search */
 .search {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .search input {
@@ -35,11 +35,6 @@ h1 {
   padding: 10px;
   border-radius: 8px;
   border: none;
-  outline: none;
-}
-
-.search input:focus {
-  outline: 2px solid #fff;
 }
 
 .search button {
@@ -47,13 +42,20 @@ h1 {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background: #ffffff;
+  background: white;
   color: #2575fc;
   font-weight: bold;
 }
 
-.search button:hover {
-  background: #e0e0e0;
+.search button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Error */
+.error {
+  color: #ffd6d6;
+  margin-bottom: 10px;
 }
 
 /* Weather Card */
@@ -61,17 +63,28 @@ h1 {
   background: rgba(255, 255, 255, 0.15);
   padding: 20px;
   border-radius: 15px;
-  min-height: 160px;
+  margin-bottom: 20px;
 }
 
 .weather-card img {
   width: 80px;
 }
 
-/* Error */
-.error {
-  margin-top: 10px;
-  color: #ffdddd;
+/* Forecast */
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.forecast-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.forecast-card img {
+  width: 50px;
 }
 
 /* Loader */
