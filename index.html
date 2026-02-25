@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SkyFetch Weather Dashboard</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Axios CDN -->
@@ -15,15 +14,23 @@
   <div class="app">
     <h1>🌤 SkyFetch</h1>
 
-    <div class="weather-card">
-      <h2 id="city">City</h2>
-      <img id="icon" src="" alt="Weather Icon" />
-      <p id="temperature">Temperature</p>
-      <p id="description">Description</p>
+    <!-- Search Section -->
+    <div class="search">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter city name"
+      />
+      <button id="searchBtn">Search</button>
     </div>
+
+    <!-- Weather Result -->
+    <div id="weather" class="weather-card"></div>
+
+    <!-- Error Message -->
+    <p id="error" class="error"></p>
   </div>
 
-  <!-- JavaScript -->
   <script src="app.js"></script>
 </body>
 </html>
