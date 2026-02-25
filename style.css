@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
@@ -11,95 +11,77 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
 }
 
-.app {
-  width: 350px;
+.app-container {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
   text-align: center;
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  color: #333;
 }
 
-/* Search */
-.search {
+.search-box {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 15px;
 }
 
-.search input {
+.search-box input {
   flex: 1;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
+  padding: 8px;
 }
 
-.search button {
-  padding: 10px 15px;
+.search-box button {
+  padding: 8px 12px;
+  background: #2575fc;
+  color: white;
   border: none;
-  border-radius: 8px;
   cursor: pointer;
-  background: white;
-  color: #2575fc;
-  font-weight: bold;
 }
 
-.search button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+.recent-searches {
+  margin-bottom: 15px;
 }
 
-/* Error */
-.error {
-  color: #ffd6d6;
-  margin-bottom: 10px;
+#recentButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
 }
 
-/* Weather Card */
-.weather-card {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 20px;
+.recent-btn {
+  padding: 5px 10px;
+  border: none;
   border-radius: 15px;
-  margin-bottom: 20px;
+  background: #eee;
+  cursor: pointer;
+  font-size: 12px;
 }
 
-.weather-card img {
+#clearHistory {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.weather-box {
+  margin-top: 10px;
+}
+
+.weather-box img {
   width: 80px;
 }
 
-/* Forecast */
-.forecast {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 10px;
-}
-
-.forecast-card {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 10px;
-  border-radius: 12px;
-}
-
-.forecast-card img {
-  width: 50px;
-}
-
-/* Loader */
-.loader {
-  border: 5px solid rgba(255, 255, 255, 0.3);
-  border-top: 5px solid white;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin: 20px auto;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
+.welcome {
+  color: #555;
 }

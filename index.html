@@ -5,29 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SkyFetch Weather Dashboard</title>
 
-  <link rel="stylesheet" href="style.css" />
-
   <!-- Axios CDN -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="app">
+  <div class="app-container">
     <h1>🌤 SkyFetch</h1>
 
-    <!-- Search -->
-    <div class="search">
+    <!-- Search Section -->
+    <div class="search-box">
       <input type="text" id="cityInput" placeholder="Enter city name" />
       <button id="searchBtn">Search</button>
     </div>
 
-    <!-- Error -->
-    <p id="error" class="error"></p>
+    <!-- Recent Searches -->
+    <div class="recent-searches">
+      <h3>Recent Searches</h3>
+      <div id="recentButtons"></div>
+      <button id="clearHistory">Clear History</button>
+    </div>
 
-    <!-- Current Weather -->
-    <div id="weather" class="weather-card"></div>
-
-    <!-- Forecast -->
-    <div id="forecast" class="forecast"></div>
+    <!-- Weather Display -->
+    <div id="weather" class="weather-box">
+      <p class="welcome">Search for a city to see the weather 🌍</p>
+    </div>
   </div>
 
   <script src="app.js"></script>
