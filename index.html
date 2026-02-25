@@ -14,21 +14,20 @@
   <div class="app">
     <h1>🌤 SkyFetch</h1>
 
-    <!-- Search Section -->
+    <!-- Search -->
     <div class="search">
-      <input
-        type="text"
-        id="cityInput"
-        placeholder="Enter city name"
-      />
+      <input type="text" id="cityInput" placeholder="Enter city name" />
       <button id="searchBtn">Search</button>
     </div>
 
-    <!-- Weather Result -->
+    <!-- Error -->
+    <p id="error" class="error"></p>
+
+    <!-- Current Weather -->
     <div id="weather" class="weather-card"></div>
 
-    <!-- Error Message -->
-    <p id="error" class="error"></p>
+    <!-- Forecast -->
+    <div id="forecast" class="forecast"></div>
   </div>
 
   <script src="app.js"></script>
